@@ -14,6 +14,11 @@ func main()  {
 	}
 
 	//监听
-	listener.Accept()
+	conn,err := listener.Accept()
+	if err != nil {
+		fmt.Println("net .Listen err:",err)
+		return
+	}
+	fmt.Println("建立连接成功")
 
 }
